@@ -1,0 +1,24 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f8fafc; color: #111; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: inherit; }
+input, select, textarea { font-family: inherit; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #f59e0b; outline-offset: 1px; }
+.admin-layout { display: flex; min-height: 100vh; }
+.sidebar { width: 240px; background: #0a0a0a; display: flex; flex-direction: column; position: fixed; height: 100vh; overflow-y: auto; z-index: 100; }
+.main-content { margin-left: 240px; flex: 1; padding: 32px; min-height: 100vh; }
+.card { background: #fff; border: 1px solid #f0f0f0; border-radius: 16px; }
+.stat-card { background: #fff; border: 1px solid #f0f0f0; border-radius: 16px; padding: 24px; }
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 700; border: none; cursor: pointer; transition: all 0.2s; }
+.btn-primary { background: #f59e0b; color: #000; }
+.btn-primary:hover { background: #d97706; }
+.btn-danger { background: #fee2e2; color: #991b1b; }
+.btn-info { background: #dbeafe; color: #1e40af; }
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+table { width: 100%; border-collapse: collapse; }
+th { padding: 14px 16px; text-align: left; font-size: 11px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; background: #f8fafc; }
+td { padding: 14px 16px; border-top: 1px solid #f9fafb; font-size: 14px; }
+tr:hover td { background: #fafafa; }
+.input { width: 100%; padding: 10px 14px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 14px; outline: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner { width: 32px; height: 32px; border: 3px solid #f0f0f0; border-top-color: #f59e0b; border-radius: 50%; animation: spin 0.7s linear infinite; margin: 40px auto; }
