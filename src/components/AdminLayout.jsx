@@ -12,6 +12,7 @@ const NAV = [
   { path: '/users', icon: '👥', label: 'Users' },
   { path: '/coupons', icon: '🏷️', label: 'Coupons' },
   { path: '/banners', icon: '🖼️', label: 'Banners' },
+  { path: '/blogs', icon: '📝', label: 'Blog Posts' },
   { path: '/reviews', icon: '⭐', label: 'Reviews' },
   { path: '/analytics', icon: '📈', label: 'Analytics' },
   { path: '/newsletter', icon: '📧', label: 'Newsletter' },

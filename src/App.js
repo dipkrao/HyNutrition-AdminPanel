@@ -15,6 +15,9 @@ import Analytics from './pages/Analytics';
 import Reviews from './pages/Reviews';
 import Newsletter from './pages/Newsletter';
 import Settings from './pages/Settings';
+import Blogs from './pages/Blogs';
+import BlogFrontend from './pages/BlogFrontend';
+import BlogDetail from './pages/BlogDetail';
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, token } = useSelector(s => s.auth);
@@ -29,6 +32,10 @@ export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
+      {/* Public Blog Routes */}
+      <Route path="/blog" element={<BlogFrontend />} />
+      <Route path="/blog/:slug" element={<BlogDetail />} />
+      {/* Admin Routes */}
       <Route path="/*" element={
         <ProtectedRoute>
           <AdminLayout>
@@ -40,6 +47,7 @@ export default function App() {
               <Route path="/users" element={<Users />} />
               <Route path="/coupons" element={<Coupons />} />
               <Route path="/banners" element={<Banners />} />
+              <Route path="/blogs" element={<Blogs />} />
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/reviews" element={<Reviews />} />
               <Route path="/newsletter" element={<Newsletter />} />
