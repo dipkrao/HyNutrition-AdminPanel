@@ -9,7 +9,7 @@ export default function Reviews() {
 
   const load = (status) => {
     setLoading(true);
-    const endpoint = status === 'pending' ? '/reviews/pending' : '/reviews/pending';
+    const endpoint = status === 'pending' ? '/reviews/pending' : '/reviews/approved';
     api.get(endpoint).then(r => setReviews(r.data.reviews)).catch(()=>setReviews([])).finally(()=>setLoading(false));
   };
 
